@@ -1,0 +1,57 @@
+version: "3.9"
+
+services:
+  # nginx:
+  #   build: .
+  #   ports:
+  #     - "8080:8080"
+
+  # haproxy-1:
+  #   image: haproxy:1.7
+  #   volumes:
+  #     - ./haproxy/haproxy-1.cfg:/usr/local/etc/haproxy/haproxy.cfg
+  #   ports:
+  #   # Service port
+  #     - "8080:8080"
+  #   # Stats port
+  #     - "8888:8888"
+
+  # haproxy-2:
+  #   image: haproxy:1.7
+  #   volumes:
+  #     - ./haproxy/haproxy-1.cfg:/usr/local/etc/haproxy/haproxy.cfg
+  #   ports:
+  #   # Service port
+  #     - "8080:8080"
+  #   # Stats port
+  #     - "8888:8888"
+
+  server-11:
+    image: mendhak/http-https-echo
+    ports:
+      - "8011:8080"
+
+  server-12:
+    image: mendhak/http-https-echo
+    ports:
+      - "8012:8080"
+
+  server-13:
+    image: mendhak/http-https-echo
+    ports:
+      - "8013:8080"
+
+  server-21:
+    image: mendhak/http-https-echo
+    ports:
+      - "8221:8080"
+
+  server-22:
+    image: mendhak/http-https-echo
+    ports:
+      - "8222:8080"
+
+  server-23:
+    image: mendhak/http-https-echo
+    ports:
+      - "8223:8080"
